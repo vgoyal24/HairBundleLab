@@ -1,0 +1,10 @@
+MATLAB
+Copyright © 2024 MathWorks, Inc. All Rights Reserved.
+
+This product includes software developed using
+MATLAB (https://www.mathworks.com/products/matlab.html).
+
+This product uses MATLAB, licensed from MathWorks, Inc.
+
+For license terms and conditions, refer to the MathWorks License Agreement:
+https://www.mathworks.com/license/mll/license.txt.
