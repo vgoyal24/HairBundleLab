@@ -55,4 +55,17 @@ A detailed description with illustrations is provided in the [documentation](res
 
 ## Running HairBundleLab
 In Chapter 5 of the [documentation](resources/HairBundleLab_Documentation.pdf), we describe how to run the application once all the parameters are defined along with an example using the default parameters for you to visualize the response of your hair bundle. At the end of this chapter, you can find some tips and tricks which we have detailed in Section 5.3 under miscellaneous information.
+
+## Using the Raw Code
+If you prefer not to use our application but are comfortable working directly with raw code for greater customization or integration into your projects, you can utilize the contents of the [rawCode](rawCode/) folder. In this folder, the main file you need to open in MATLAB is <code>ThreeStBundle_Index.m</code>, which allows you to run the model with preset parameters. Below is a detailed description of each file in the folder:
+* <code>ThreeStBundle_Index.m</code>: This is the primary script file where you can specify input properties and numerical simulation parameters, such as time steps. Additionally, you can customize the initial time for which the static force is applied to the system, a feature not yet available in the application (for more details, refer to Section 4.3 of the [documentation](resources/HairBundleLab_Documentation.pdf)). This file also offers customization options for your plots.
+* <code>geometryNL.m</code> This function is crucial for defining the HB geometry, including radii, lengths, and related quantities, which are saved in the <code>geom</code> structure. The file computes all geometric relationships between different stereocilia as both symbolic and mathematical functions, stored in the <code>func</code> structure. 
+* <code>HB_params.m</code>: This important function file allows you to define all mechanical and electrical parameters, saved in the <code>param</code> structure. It is likely you will modify this file frequently when designing your HB.
+* <code>forceTime.m</code>: This function defines the force matrix, which has dimensions of $m\times n$, where $m$ represents the number of force amplitudes you simulate, and $n$ represents the force values over time.
+* <code>probability.m</code>: Unless you wish to modify the Boltzmann functions for modeling channel open probability, you do not need to change this file. It utilizes parameters from <code>geom</code>, <code>func</code> and <code>param</code>.
+* <code>rkSolver.m</code>: This function contains a custom Runge-Kutta fourth-order numerical solver. It uses parameters defined in the previously mentioned files and applies the three equations of motion derived in the research to predict the HB response.
+* <code>Probe_rkSolver.m</code>: Similar to <code>rkSolver.m</code>, this file includes slightly modified equations of motion due to the addition of the probe.
+* <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
+
+
     
