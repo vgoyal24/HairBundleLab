@@ -1,8 +1,4 @@
-<--
-
-Add copyright notice here.
-
--->
+Copyright © 2024. The Regents of the University of Michigan.
 
 # HairBundleLab
 
