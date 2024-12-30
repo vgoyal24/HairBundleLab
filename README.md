@@ -45,7 +45,7 @@ Once installed, you can run HairBundleLab by following these steps, each time yo
             <img src="resources/images/openApp.png" alt="Open App" width="100%" align="center" title="">
         </p>
     </li>
-    <li>Click on <code>HairBundleApp</code>code> to execute it, indicated by the black dotted box in the above figure or in Fig. 3.2. If you do not see it, expand the list of installed apps using the drop-down arrow located within the blue dotted box.</li>
+    <li>Click on <code>HairBundleApp</code> to execute it, indicated by the black dotted box in the above figure or in Fig. 3.2. If you do not see it, expand the list of installed apps using the drop-down arrow located within the blue dotted box.</li>
 </ol>
 
 By following these instructions, you should be able to download, install, and run HairBundleLab without any issues. For further details on app functionalities and more specific instructions, please refer to the [documentation](resources/HairBundleLab_Documentation.pdf).
