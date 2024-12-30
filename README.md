@@ -28,7 +28,7 @@ If you do not have the Parallel Computing Toolbox, you can easily disable parall
 Once you have verified that your system meets all necessary requirements, you are ready to download and install HairBundleLab. If you are reading this document from a non-official source, make sure to go to our official lab website to download the installation file.
 
 ### Downloading the Application
-To download the application, visit the [GitHub repository](https://github.com/vgoyal24/HairBundleLab). Click on the <img src="resources/images/git.png" alt="DownloadZIP" width="65" title=""> button above. From the drop-down menu, click on <code>Download ZIP</code> and save it in your preferred folder. Once you unzip the downloaded file, open the folder named <code>app</code> and you can find the installation file named <code>HairBundleApp.mlappinstall</code> inside. 
+To download the application, visit the [GitHub repository](https://github.com/vgoyal24/HairBundleLab). Click on the <img src="resources/images/git.png" alt="DownloadZIP" width="65" title=""> button above. From the drop-down menu, click on <code>Download ZIP</code> and save it in your preferred folder. Once you unzip the downloaded file, open the folder named <code>app</code> and you can find the installation file named <code>HairBundleLab.mlappinstall</code> inside. 
 
 ### Installing the Application
 After downloading the file, navigate to the folder where it was saved and double-click on it. This will open MATLAB (if it is not already running) and prompt you to install the app under `My Apps`, as shown below in the figure and also in Fig. 3.1 of the [documentation](resources/HairBundleLab_Documentation.pdf). Click the `Install` button, and the installation should be completed in under a minute.
@@ -45,7 +45,7 @@ Once installed, you can run HairBundleLab by following these steps, each time yo
             <img src="resources/images/openApp.png" alt="Open App" width="100%" align="center" title="">
         </p>
     </li>
-    <li>Click on <code>HairBundleApp</code> to execute it, indicated by the black dotted box in the above figure or in Fig. 3.2. If you do not see it, expand the list of installed apps using the drop-down arrow located within the blue dotted box.</li>
+    <li>Click on <code>HairBundleLab</code> to execute it, indicated by the black dotted box in the above figure or in Fig. 3.2. If you do not see it, expand the list of installed apps using the drop-down arrow located within the blue dotted box.</li>
 </ol>
 
 By following these instructions, you should be able to download, install, and run HairBundleLab without any issues. For further details on app functionalities and more specific instructions, please refer to the [documentation](resources/HairBundleLab_Documentation.pdf).
