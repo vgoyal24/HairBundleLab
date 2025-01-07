@@ -10,6 +10,6 @@ Before you create a new issue entry, we recommend you first search among existin
 
 We conventionally prefix the issue title with the component name in brackets, such as <code>[GUI] XYZ Not Working</code> or <code>[Raw Code] XYZ Not Working</code>, so as to make lists more easy to navigate, and we would be grateful if you did the same.
 
->## Do you have questions about the source code, the build procedure or the development process?
+>## Do you have questions about the source code or the development process of the GUI?
 
 Feel free to contact us through [email](mailto:varungo@umich.edu?subject=[GitHub]%20HairBundleLab%20Query&cc=grosh@umich.edu).
