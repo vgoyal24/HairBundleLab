@@ -79,6 +79,6 @@ If you prefer not to use our application but are comfortable working directly wi
 
 >## Release Notes
 ### 1.0
-Release date: 2025-01-07
+Release date: 01-07-2025
 
 * Initial release.
