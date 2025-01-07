@@ -77,5 +77,8 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>Probe_rkSolver.m</code>: Similar to <code>rkSolver.m</code>, this file includes slightly modified equations of motion due to the addition of the probe. In case you do not wish to use or have the Parallel Computing Toolbox, you can modify <code>line 42</code> by replacing <code>parfor</code> with <code>for</code>.
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
+>## Release Notes
+### 1.0
+Release date: 2025-01-07
 
-    
+* Initial release.
