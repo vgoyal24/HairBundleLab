@@ -85,4 +85,4 @@ Release date: 01-07-2025
 
 
 >## Contact Us
-If you encounter any problems during any step of the installation process and while using the GUI or the raw codes, feel free to contact us at [Varun Goyal](mailto:varungo@umich.edu?cc=grosh@umich.edu?subject=[GitHub]%20HairBundleLab%20Query).
+If you encounter any problems during any step of the installation process and while using the GUI or the raw codes, feel free to contact us at [Varun Goyal](mailto:varungo@umich.edu?subject=[GitHub]%20HairBundleLab%20Query?cc=grosh@umich.edu).
