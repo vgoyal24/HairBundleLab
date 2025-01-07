@@ -78,7 +78,7 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
 >## Release Notes
-### 1.0
+### v1.0
 Release date: 01-07-2025
 
 * Initial release.
