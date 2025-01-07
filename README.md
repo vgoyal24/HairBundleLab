@@ -8,41 +8,45 @@ HairBundleLab is a specialized software designed to simulate the response of mam
 
 This software enables users to numerically investigate the complexities of cochlear HB responses to step-like stimuli. Whether applying force-input mechanisms such as fluid-jets or displacement inputs like stiff probes, HairBundleLab provides a comprehensive platform for exploring and visualizing these intricate processes.
 
-**Core Features**: The software comprises raw code and an intuitive graphical user interface developed in MATLAB App Designer. The software empowers users to:
+**Core Features**: The software comprises an intuitive graphical user interface (GUI) developed in MATLAB App Designer and the raw codes. The software empowers users to:
 * Design custom HB models by modifying geometric, mechanical, and electrical parameters to align with specific experimental requirements.
 * Visualize HB displacements and mechano-electric transducer currents in real time, offering valuable insights into HB behavior in the time domain.
 
-The instructions on how to use the raw codes are provided [below](#using-the-raw-code), and the comprehensive [documentation](resources/HairBundleLab_Documentation.pdf) serves as your go-to tutorial, guiding you step-by-step through the app interface. You will discover what each parameter represents, how to modify them effectively and gain insights through detailed illustrations and practical examples. Whether you're a seasoned researcher or a curious learner, HairBundleLab is designed to enhance your understanding and facilitate your research in auditory science with ease and precision. A brief summary to get you started is also provided [below](#what-are-the-system-requirements-for-using-hairbundlelab).
+The comprehensive [documentation](resources/HairBundleLab_Documentation.pdf) serves as your go-to tutorial, guiding you step-by-step through the app interface. You will discover what each parameter represents, how to modify them effectively and gain insights through detailed illustrations and practical examples. Whether you're a seasoned researcher or a curious learner, HairBundleLab is designed to enhance your understanding and facilitate your research in auditory science with ease and precision. A brief [summary](#what-are-the-system-requirements-for-using-hairbundlelab) to get you started is also provided below. The [instructions](#using-the-raw-code) on how to use the raw codes are provided at the end.
 
 ## What are the System Requirements for using HairBundleLab?
 
 This section details the essential system requirements needed to run HairBundleLab on your computer. Please ensure that your system meets the following criteria. Below is a list of the mandatory software required for the installation and operation of the application:
 
-* **MATLAB**: The application was developed using MATLAB 2024b and requires a licensed MATLAB installation to run.
-* **MATLAB Symbolic Math Toolbox**: The application employs various symbolic functions to solve for the bundle geometry and perform nonlinear analysis, including nonlinear geometry. Therefore, the Symbolic Math Toolbox must be installed in your MATLAB environment.
-* **MATLAB Parallel Computing Toolbox** (not mandatory, but recommended): This toolbox is used in the background to run multiple simulations simultaneously, improving efficiency and reducing computation time. For instance, if you want to analyze responses to multiple force or displacement amplitudes, parallel computing can significantly shorten the total time required. The simulation time will vary based on the number of GPUs in your machine and the number of workers allocated for parallel computing in MATLAB. By default, the HairBundleLab has parallel computing turned ON, but this setting can be turned OFF if needed. If your MATLAB license does not include this toolbox, refer to Section 2.2 and Section 4 for more information.
+* **MATLAB**: The software was developed using MATLAB 2024b and requires a licensed MATLAB installation to run.
+* **MATLAB Symbolic Math Toolbox**: The software employs various symbolic functions to solve for the bundle geometry and perform nonlinear analysis, including nonlinear geometry. Therefore, the Symbolic Math Toolbox must be installed in your MATLAB environment.
+* **MATLAB Parallel Computing Toolbox** (not mandatory, but recommended): This toolbox is used in the background to run multiple simulations simultaneously, improving efficiency and reducing computation time. For instance, if you want to analyze responses to multiple force or displacement amplitudes, parallel computing can significantly shorten the total time required. The simulation time will vary based on the number of GPUs in your machine and the number of workers allocated for parallel computing in MATLAB. By default, the HairBundleLab has parallel computing turned ON, but this setting can be turned OFF if needed. If your MATLAB license does not include this toolbox, refer to
+    * **For GUI**: Section 2.2 and Section 4.4 of the [documentation](resources/HairBundleLab_Documentation.pdf) for more information or read [instructions](#what-if-i-do-not-have-matlab-2024b-or-later) below.
+    * **For raw code**: Read how to modify the file <code>rkSolver.m</code> or <code>Probe_rkSolver.m</code> after their respective descriptions in the [instructions](#using-the-raw-code) for using the raw codes.
 
-### What if I don't have MATLAB 2024b or later?
+### What if I do not have MATLAB 2024b or later?
 If you are using an older version of MATLAB, you can still use HairBundleLab, although some formatting may not render correctly. For instance, the symbol $\mu$ might appear as \mu, or subscripts/superscripts (e.g., $l1gs$ instead of $l_{1}^{gs}$) might not display properly. Functionally, the simulation would operate without issues.
 
-Parallel computing has been supported in MATLAB since 2004, so any version released after 2004 can perform parallel computing. If you do not have the Parallel Computing Toolbox included with your license, you can still run the app by following the instructions briefly mentioned in Section 2.2 and detailed in Section 4.4. To check which toolboxes are included with your MATLAB installation, refer to Snippet 2.1 in Chapter 2 of the documentation for the necessary code lines to input in the command window.
+Parallel computing has been supported in MATLAB since 2004, so any version released after 2004 can perform parallel computing. If you do not have the Parallel Computing Toolbox included with your MATLAB license, you can still run the GUI by following the instructions briefly mentioned in Section 2.2 and detailed in Section 4.4 of the [documentation](resources/HairBundleLab_Documentation.pdf). To check which toolboxes are included with your MATLAB installation, refer to Snippet 2.1 in Chapter 2 of the [documentation](resources/HairBundleLab_Documentation.pdf) for the necessary code lines to input in the command window. For the raw codes, as mentioned before, read how to modify the file <code>rkSolver.m</code> or <code>Probe_rkSolver.m</code> after their respective descriptions in the [instructions](#using-the-raw-code) for using the raw codes.
 
-### What if I don't have the Parallel Computing Toolbox?
-If you do not have the Parallel Computing Toolbox, you can easily disable parallel computing within the application. Simply open the app and press the button marked <img src="resources/images/parOFF.png" alt="Parallel Off Button" width="25" title=""> to disable parallel computing. When the button changes color to red, as shown by <img src="resources/images/parON.png" alt="Parallel ON Button" width="25" title="">, parallel computing is turned OFF. You can press the button again to re-enable parallel computing. For more detailed information on each button in the application, please refer to Section 4.4.
+### What if I do not have the Parallel Computing Toolbox?
+If you do not have the Parallel Computing Toolbox, you can easily disable parallel computing within the GUI. Simply open it and press the button marked <img src="resources/images/parOFF.png" alt="Parallel Off Button" width="25" title=""> to disable parallel computing. When the button changes color to red, as shown by <img src="resources/images/parON.png" alt="Parallel ON Button" width="25" title="">, parallel computing is turned OFF. You can press the button again to re-enable parallel computing. For more detailed information on each button in the GUI, please refer to Section 4.4 of the [documentation](resources/HairBundleLab_Documentation.pdf).
 
-## Setting Up HairBundleLab
-Once you have verified that your system meets all necessary requirements, you are ready to download and install HairBundleLab. If you are reading this document from a non-official source, make sure to go to our official lab website to download the installation file.
+## Using the GUI
 
-### Downloading the Application
-To download the application, visit the [GitHub repository](https://github.com/vgoyal24/HairBundleLab). Click on the <img src="resources/images/git.png" alt="DownloadZIP" width="65" title=""> button above. From the drop-down menu, click on <code>Download ZIP</code> and save it in your preferred folder. Once you unzip the downloaded file, open the folder named <code>app</code> and you can find the installation file named <code>HairBundleLab.mlappinstall</code> inside. 
+### Setting Up HairBundleLab
+Once you have verified that your system meets all necessary requirements, you are ready to download and install HairBundleLab.
 
-### Installing the Application
-After downloading the file, navigate to the folder where it was saved and double-click on it. This will open MATLAB (if it is not already running) and prompt you to install the app under `My Apps`, as shown below in the figure and also in Fig. 3.1 of the [documentation](resources/HairBundleLab_Documentation.pdf). Click the `Install` button, and the installation should be completed in under a minute.
+#### Downloading the GUI
+To download the application, visit the [GitHub repository](https://github.com/vgoyal24/HairBundleLab). Click on the <img src="resources/images/git.png" alt="DownloadZIP" width="65" title=""> button above. From the drop-down menu, click on <code>Download ZIP</code> and save it in your preferred folder. Once you unzip the downloaded file, open the folder named <code>app</code>, and you can find the installation file named <code>HairBundleLab.mlappinstall</code> inside. 
+
+#### Installing the GUI
+After downloading the file, navigate to the folder where it was saved and double-click on it. This will open MATLAB (if it is not already running) and prompt you to install the GUI under `My Apps`, as shown below in the figure and also in Fig. 3.1 of the [documentation](resources/HairBundleLab_Documentation.pdf). Click the `Install` button, and the installation should complete in under a minute.
 <p align="center">
     <img src="resources/images/install.png" alt="Install" width="300" align="center" title="">
 </p>
 
-### Opening the Application
+#### Opening the GUI/App
 Once installed, you can run HairBundleLab by following these steps, each time you wish to open the app:
 <ol>
     <li>Open MATLAB.</li>
@@ -56,11 +60,11 @@ Once installed, you can run HairBundleLab by following these steps, each time yo
 
 By following these instructions, you should be able to download, install, and run HairBundleLab without any issues. For further details on app functionalities and more specific instructions, please refer to the [documentation](resources/HairBundleLab_Documentation.pdf).
 
-## Navigating through HairBundleLab
-A detailed description with illustrations is provided in the [documentation](resources/HairBundleLab_Documentation.pdf) for HairBundleLab explaining the different components of the application. For example, how to define the mechanical, electrical, and geometric properties, and what properties of the bundle can be changed in the app. Please review Chapter 4 of the [documentation](resources/HairBundleLab_Documentation.pdf) to understand what each parameter means and where to modify these parameters in the application. 
+### Navigating through HairBundleLab
+A detailed description with illustrations is provided in the [documentation](resources/HairBundleLab_Documentation.pdf) for HairBundleLab, explaining the different components of the app. For example, how to define the mechanical, electrical, and geometric properties, and what properties of the bundle can be changed in the app. Please review Chapter 4 of the [documentation](resources/HairBundleLab_Documentation.pdf) to understand what each parameter means and where to modify these parameters in the app. 
 
-## Running HairBundleLab
-In Chapter 5 of the [documentation](resources/HairBundleLab_Documentation.pdf), we describe how to run the application once all the parameters are defined along with an example using the default parameters for you to visualize the response of your hair bundle. At the end of this chapter, you can find some tips and tricks which we have detailed in Section 5.3 under miscellaneous information.
+### Running HairBundleLab
+In Chapter 5 of the [documentation](resources/HairBundleLab_Documentation.pdf), we describe how to run the app once all the parameters are defined, along with an example using the default parameters for you to visualize the response of your HB. At the end of this chapter, you can find some tips and tricks, which we have detailed in Section 5.3 under miscellaneous information.
 
 ## Using the Raw Code
 If you prefer not to use our application but are comfortable working directly with raw code for greater customization or integration into your projects, you can utilize the contents of the [rawCode](rawCode/) folder. In this folder, the main file you need to open in MATLAB is <code>ThreeStBundle_Index.m</code>, which allows you to run the model with preset parameters. Below is a detailed description of each file in the folder:
@@ -69,8 +73,8 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>HB_params.m</code>: This important function file allows you to define all mechanical and electrical parameters, saved in the <code>param</code> structure. It is likely you will modify this file frequently when designing your HB.
 * <code>forceTime.m</code>: This function defines the force matrix, which has dimensions of $m\times n$, where $m$ represents the number of force amplitudes you simulate, and $n$ represents the force values over time.
 * <code>probability.m</code>: Unless you wish to modify the Boltzmann functions for modeling channel open probability, you do not need to change this file. It utilizes parameters from <code>geom</code>, <code>func</code> and <code>param</code>.
-* <code>rkSolver.m</code>: This function contains a custom Runge-Kutta fourth-order numerical solver. It uses parameters defined in the previously mentioned files and applies the three equations of motion derived in the research to predict the HB response.
-* <code>Probe_rkSolver.m</code>: Similar to <code>rkSolver.m</code>, this file includes slightly modified equations of motion due to the addition of the probe.
+* <code>rkSolver.m</code>: This function contains a custom Runge-Kutta fourth-order numerical solver. It uses parameters defined in the previously mentioned files and applies the three equations of motion derived in the research to predict the HB response. This is also the file you need to modify if you do not have a Parallel Computing Toolbox license from MATLAB or if you choose not to use it. In <code>line 41</code>, simply change <code>parfor</code> to <code>for</code>.
+* <code>Probe_rkSolver.m</code>: Similar to <code>rkSolver.m</code>, this file includes slightly modified equations of motion due to the addition of the probe. In case you do not wish to use or have the Parallel Computing Toolbox, you can modify <code>line 42</code> by replacing <code>parfor</code> with <code>for</code>.
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
 
