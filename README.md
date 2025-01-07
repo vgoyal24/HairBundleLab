@@ -1,12 +1,27 @@
-Copyright © 2024. The Regents of the University of Michigan.
+Copyright © 2024. The Regents of the University of Michigan.<br/>
+[Grosh Lab](https://sites.google.com/a/umich.edu/groshlab/home), Mechanical Engineering.<br/>
+This project is licensed under the terms of the BSD 3-clause license. 
 
 # HairBundleLab
+
+HairBundleLab is a specialized software designed to simulate the response of mammalian cochlear hair bundles (HBs), critical mechanosensory structures within the inner ear responsible for transducing sound, a mechanical input, into electrical signals processed by the brain. In inner hair cells, HB deflection marks the final mechanical step before neural activation, while in outer hair cells, it functions as the gain control mechanism in the cochlear amplifier, a process essential for normal hearing.
+
+This software enables users to numerically investigate the complexities of cochlear HB responses to step-like stimuli. Whether applying force-input mechanisms such as fluid-jets or displacement inputs like stiff probes, HairBundleLab provides a comprehensive platform for exploring and visualizing these intricate processes.
+
+**Core Features:** The software comprises raw code and an intuitive graphical user interface developed in MATLAB App Designer. The software empowers users to:
+* Design custom HB models by modifying geometric, mechanical, and electrical parameters to align with specific experimental requirements.
+* Visualize HB displacements and mechano-electric transducer currents in real time, offering valuable insights into HB behavior in the time domain.
+
+The instructions on how to use the raw codes are provided [below](#using-the-raw-code). The comprehensive [documentation](resources/HairBundleLab_Documentation.pdf) serves as your go-to tutorial, guiding you step-by-step through the app's interface. You will discover what each parameter represents, how to modify them effectively and gain insights through detailed illustrations and practical examples. Whether you're a seasoned researcher or a curious learner, HairBundleLab is designed to enhance your understanding and facilitate your research in auditory science with ease and precision. A brief summary to get you started is also provided below.
 
 Welcome to HairBundleLab, your ultimate numerical tool for exploring the complexities of mammalian cochlear hair bundle (HB) responses to step-like stimuli. Whether you're using force input mechanisms like fluid-jets or displacement inputs such as rigid probes, HairBundleLab offers a platform to understand and visualize these intricate processes.
 
 With HairBundleLab, you are not just observing, you are in control. Craft your own HB models, tailoring them precisely by adjusting geometrical, mechanical, and electrical parameters to suit your experimental needs. The app provides you with an in-depth look at HB behavior, offering real-time visualizations of displacements and mechano-electric transducer (MET) currents in the time domain.
 
-The comprehensive [documentation](resources/HairBundleLab_Documentation.pdf) serves as your go-to tutorial, guiding you step-by-step through the app's interface. You will discover what each parameter represents, how to modify them effectively, and gain insights through detailed illustrations and practical examples. Whether you're a seasoned researcher or a curious learner, HairBundleLab is designed to enhance your understanding and facilitate your research in auditory science with ease and precision. A brief summary to get you started is also provided below.
+
+
+## What do you get with the license?
+* 
 
 ## What are the System Requirements for using HairBundleLab?
 
