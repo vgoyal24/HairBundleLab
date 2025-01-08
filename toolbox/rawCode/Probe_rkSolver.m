@@ -177,8 +177,6 @@ function [u, v, w, t] = Probe_rkSolver(param, ~, tNoForceEnd, tAppliedForce, tAf
         u(j,:) = x;
         v(j,:) = y;
         w(j,:) = z;
-        t(j,:) = t_int;
-
-        
+        t(j,:) = t_int;   
     end
 end
