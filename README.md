@@ -14,7 +14,7 @@ This software enables users to numerically investigate the complexities of cochl
 
 The comprehensive [documentation](resources/HairBundleLab_Documentation.pdf) serves as your go-to tutorial, guiding you step-by-step through the app interface. You will discover what each parameter represents, how to modify them effectively and gain insights through detailed illustrations and practical examples. Whether you're a seasoned researcher or a curious learner, HairBundleLab is designed to enhance your understanding and facilitate your research in auditory science with ease and precision. A brief [summary](#what-are-the-system-requirements-for-using-hairbundlelab) to get you started is also provided below. The [instructions](#using-the-raw-code) on how to use the raw codes are provided at the end.
 
->## What are the System Requirements for using HairBundleLab?
+## What are the System Requirements for using HairBundleLab?
 
 This section details the essential system requirements needed to run HairBundleLab on your computer. Please ensure that your system meets the following criteria. Below is a list of the mandatory software required for the installation and operation of the application:
 
@@ -32,7 +32,7 @@ Parallel computing has been supported in MATLAB since 2004, so any version relea
 ### What if I do not have the Parallel Computing Toolbox?
 If you do not have the Parallel Computing Toolbox, you can easily disable parallel computing within the GUI. Simply open it and press the button marked <img src="resources/images/parOFF.png" alt="Parallel Off Button" width="25" title=""> to disable parallel computing. When the button changes color to red, as shown by <img src="resources/images/parON.png" alt="Parallel ON Button" width="25" title="">, parallel computing is turned OFF. You can press the button again to re-enable parallel computing. For more detailed information on each button in the GUI, please refer to Section 4.4 of the [documentation](resources/HairBundleLab_Documentation.pdf).
 
->## Using the GUI
+## Using the GUI
 
 ### Setting Up HairBundleLab
 Once you have verified that your system meets all necessary requirements, you are ready to download and install HairBundleLab.
@@ -66,7 +66,7 @@ A detailed description with illustrations is provided in the [documentation](res
 ### Running HairBundleLab
 In Chapter 5 of the [documentation](resources/HairBundleLab_Documentation.pdf), we describe how to run the app once all the parameters are defined, along with an example using the default parameters for you to visualize the response of your HB. At the end of this chapter, you can find some tips and tricks, which we have detailed in Section 5.3 under miscellaneous information.
 
->## Using the Raw Code
+## Using the Raw Code
 If you prefer not to use our application but are comfortable working directly with raw code for greater customization or integration into your projects, you can utilize the contents of the [rawCode](toolbox/rawCode/) folder. In this folder, the main file you need to open in MATLAB is <code>ThreeStBundle_Index.m</code>, which allows you to run the model with preset parameters. Below is a detailed description of each file in the folder:
 * <code>ThreeStBundle_Index.m</code>: This is the primary script file where you can specify input properties and numerical simulation parameters, such as time steps. Additionally, you can customize the initial time for which the static force is applied to the system, a feature not yet available in the application (for more details, refer to Section 4.3 of the [documentation](resources/HairBundleLab_Documentation.pdf)). This file also offers customization options for your plots.
 * <code>geometryNL.m</code> This function is crucial for defining the HB geometry, including radii, lengths, and related quantities, which are saved in the <code>geom</code> structure. The file computes all geometric relationships between different stereocilia as both symbolic and mathematical functions, stored in the <code>func</code> structure. 
@@ -77,12 +77,12 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>Probe_rkSolver.m</code>: Similar to <code>rkSolver.m</code>, this file includes slightly modified equations of motion due to the addition of the probe. In case you do not wish to use or have the Parallel Computing Toolbox, you can modify <code>line 42</code> by replacing <code>parfor</code> with <code>for</code>.
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
->## Release Notes
+## Release Notes
 ### v1.0
 Release date: 01-07-2025
 
 * Initial release.
 
 
->## Contribute or Contact Us
+## Contribute or Contact Us
 If you encounter any problems during any step of the installation process or while using the GUI and the raw codes or anything else related to HairBundleLab, please read through [CONTRIBUTING.md](CONTRIBUTING.md)
