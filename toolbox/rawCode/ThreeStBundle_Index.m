@@ -183,7 +183,7 @@ fprintf('Plotting the Results...\n');
 % Use "range" to plot specific traces.
 range = 1:13;
 
-figure(15)
+figure(1)
 plot((t(range,:)')*10^3-tNoForce*1e3-0*4.9, xHB(range,:)'*10^9, '-k', LineWidth=2); 
 title('HB Displacements');
 xlab = xlabel('Time [ms]');
@@ -194,7 +194,7 @@ set(gca, 'fontname', 'helvetica', 'fontsize', 26)
 set(xlab, 'fontsize', 28);
 set(ylab, 'fontsize', 28);
 
-figure(16)
+figure(2)
 plot((t(range,:)')*10^3-tNoForce*1e3-0*4.9, iMet(range,:)'*10^9, 'color', [0 0 0], LineWidth=2); 
 title('MET Currents');
 xlab = xlabel('Time [ms]');
