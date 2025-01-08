@@ -85,4 +85,4 @@ Release date: 01-07-2025
 
 
 ## Contribute or Contact Us
-If you encounter any problems during any step of the installation process or while using the GUI and the raw codes or anything else related to HairBundleLab, please read through [CONTRIBUTING.md](CONTRIBUTING.md)
+If you encounter any problems during any step of the installation process or while using the GUI and the raw codes or anything else related to HairBundleLab, please read through [CONTRIBUTING.md](CONTRIBUTING.md).
