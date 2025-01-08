@@ -1,3 +1,9 @@
+% HairBundleLab
+% Version 1.0 07-Jan-2025
+ 
+% Author:
+% Varun Goyal
+
 % Toolbox Overview:
 % This toolbox provides tools for simulating and visualizing cochlear 
 % hair bundle responses. It includes raw computational code and a GUI 
