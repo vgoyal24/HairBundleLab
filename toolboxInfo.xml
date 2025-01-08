@@ -5,7 +5,7 @@
     <version>1.0</version>
     <description>A toolbox for simulating mammalian cochlear hair bundle responses.</description>
     <matlabRelease>R2024b</matlabRelease> 
-    <author>Varun Goyal</author>
+    <author>Varun Goyal and Karl Grosh</author>
     <email>varungo@umich.edu</email>
     <website>https://sites.google.com/a/umich.edu/groshlab/home</website>
     <license>BSD-3</license> 
