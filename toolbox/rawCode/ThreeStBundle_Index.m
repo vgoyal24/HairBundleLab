@@ -34,7 +34,7 @@ func.fun_Po2 = prob.fun_Po2;
 fprintf("Geometric relations computed...\n");
 
 %% External Force Definition
-probe_flag = 1;
+probe_flag = 0;
 
 % Static force to change the resting open probability
 Fst = 0e-12; 
