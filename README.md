@@ -50,7 +50,7 @@ After downloading the file, navigate to the folder where it was saved and double
 Once installed, you can run HairBundleLab by following these steps, each time you wish to open the app:
 <ol>
     <li>Open MATLAB.</li>
-    <li>Navigate to the <code>APPS</code> tab in the MATLAB navigation bar, as highlighted by the red dotted box in the figure below and in Fig 3.2 of the <a href="resources/HBL_Documentation">documentation</a>.
+    <li>Navigate to the <code>APPS</code> tab in the MATLAB navigation bar, as highlighted by the red dotted box in the figure below and in Fig 3.2 of the <a href="resources/HairBundleLab_Documentation.pdf">documentation</a>.
         <p align="center">
             <img src="resources/images/openApp.png" alt="Open App" width="100%" align="center" title="">
         </p>
