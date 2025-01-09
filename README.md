@@ -78,11 +78,15 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
 ## Release Notes
+### v1.1
+Release date: 01-08-2025
+
+* Fixed an issue with data export feature in the app in older MATLAB versions.
+
 ### v1.0
 Release date: 01-07-2025
 
 * Initial release.
-
 
 ## Contribute or Contact Us
 If you encounter any problems during any step of the installation process or while using the GUI and the raw codes or anything else related to HairBundleLab, please read through [CONTRIBUTING.md](CONTRIBUTING.md).
