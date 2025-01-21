@@ -8,11 +8,14 @@ HairBundleLab is a specialized software designed to simulate the response of mam
 
 This software enables users to numerically investigate the complexities of cochlear HB responses to step-like stimuli. Whether applying force-input mechanisms such as fluid-jets or displacement inputs like stiff probes, HairBundleLab provides a comprehensive platform for exploring and visualizing these intricate processes.
 
-**Core Features**: The software comprises an intuitive graphical user interface (GUI) developed in MATLAB App Designer and the raw codes. The software empowers users to:
+**Core Features**: The software comprises an intuitive graphical user interface (GUI, shown below) developed in MATLAB App Designer and the raw codes. The software empowers users to:
 * Design custom HB models by modifying geometric, mechanical, and electrical parameters to align with specific experimental requirements.
 * Visualize HB displacements and mechano-electric transducer currents in real time, offering valuable insights into HB behavior in the time domain.
 
 The comprehensive [documentation](resources/HairBundleLab_Documentation.pdf) serves as your go-to tutorial, guiding you step-by-step through the app interface. You will discover what each parameter represents, how to modify them effectively and gain insights through detailed illustrations and practical examples. Whether you're a seasoned researcher or a curious learner, HairBundleLab is designed to enhance your understanding and facilitate your research in auditory science with ease and precision. A brief [summary](#what-are-the-system-requirements-for-using-hairbundlelab) to get you started is also provided below. The [instructions](#using-the-raw-code) on how to use the raw codes are provided at the end. Note that HairBundleLab can also be downloaded from MATLAB [File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/178699-hairbundlelab-the-mammalian-hair-bundle-response-simulator).
+<p align="center">
+    <img src="resources/images/complete.png" alt="GUI" width="80%" align="center" title="">
+</p>
 
 ## What are the System Requirements for using HairBundleLab?
 
