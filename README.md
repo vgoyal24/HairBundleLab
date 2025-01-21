@@ -8,7 +8,7 @@ HairBundleLab is a specialized software designed to simulate the response of mam
 
 This software enables users to numerically investigate the complexities of cochlear HB responses to step-like stimuli. Whether applying force-input mechanisms such as fluid-jets or displacement inputs like stiff probes, HairBundleLab provides a comprehensive platform for exploring and visualizing these intricate processes.
 
-**Core Features**: The software comprises an intuitive graphical user interface (GUI, shown below) developed in MATLAB App Designer and the raw codes. The software empowers users to:
+**Core Features**: The software comprises an intuitive graphical user interface (GUI), shown below, developed in MATLAB App Designer and the raw codes. The software empowers users to:
 * Design custom HB models by modifying geometric, mechanical, and electrical parameters to align with specific experimental requirements.
 * Visualize HB displacements and mechano-electric transducer currents in real time, offering valuable insights into HB behavior in the time domain.
 
