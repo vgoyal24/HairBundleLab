@@ -81,10 +81,15 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
 ## Release Notes
+### v1.2
+Release date: 01-23-2025
+
+* Fixed an issue relating to geometry update in the GUI app. This update makes sure that the user-defined geometric properties are supplied to the backend Runge-Kutta solvers appropriately.
+
 ### v1.1
 Release date: 01-08-2025
 
-* Fixed an issue with data export feature in the app in older MATLAB versions.
+* Fixed an issue with the data export feature in the app in older MATLAB versions.
 
 ### v1.0
 Release date: 01-07-2025
