@@ -44,13 +44,13 @@ Once you have verified that your system meets all necessary requirements, you ar
 To download the GUI, navigate to [app](toolbox/app) folder inside the [toolbox](toolbox) folder. Alternately, you can download the repository by visiting the [GitHub repository](https://github.com/vgoyal24/HairBundleLab). Click on the <img src="resources/images/git.png" alt="DownloadZIP" width="65" title=""> button above. From the drop-down menu, click on <code>Download ZIP</code> and save it in your preferred folder. Once you unzip the downloaded file, navigate to <code>toolbox/app</code>, and you can find the installation file named <code>HairBundleLab.mlappinstall</code> inside. 
 
 #### Installing the GUI
-After downloading the file, navigate to the folder where it was saved and double-click on it. This will open MATLAB (if it is not already running) and prompt you to install the GUI under `My Apps`, as shown below in the figure and also in Fig. 3.1 of the [documentation](resources/HairBundleLab_Documentation.pdf). Click the `Install` button, and the installation should complete in under a minute.
+After downloading the file, navigate to the folder where it was saved and double-click on it. This will open MATLAB (if it is not already running) and prompt you to install the GUI under `My Apps`, as shown below in the figure and also in Fig. 3.1 of the [documentation](resources/HairBundleLab_Documentation.pdf). Click the `Install` button, and the installation should be completed in under a minute.
 <p align="center">
     <img src="resources/images/install.png" alt="Install" width="300" align="center" title="">
 </p>
 
 #### Opening the GUI/App
-Once installed, you can run HairBundleLab by following these steps, each time you wish to open the app:
+Once installed, you can run HairBundleLab by following these steps each time you wish to open the app:
 <ol>
     <li>Open MATLAB.</li>
     <li>Navigate to the <code>APPS</code> tab in the MATLAB navigation bar, as highlighted by the red dotted box in the figure below and in Fig 3.2 of the <a href="resources/HairBundleLab_Documentation.pdf">documentation</a>.
@@ -64,7 +64,7 @@ Once installed, you can run HairBundleLab by following these steps, each time yo
 By following these instructions, you should be able to download, install, and run HairBundleLab without any issues. For further details on app functionalities and more specific instructions, please refer to the [documentation](resources/HairBundleLab_Documentation.pdf).
 
 ### Navigating through HairBundleLab
-A detailed description with illustrations is provided in the [documentation](resources/HairBundleLab_Documentation.pdf) for HairBundleLab, explaining the different components of the app. For example, how to define the mechanical, electrical, and geometric properties, and what properties of the bundle can be changed in the app. Please review Chapter 4 of the [documentation](resources/HairBundleLab_Documentation.pdf) to understand what each parameter means and where to modify these parameters in the app. 
+A detailed description with illustrations is provided in the [documentation](resources/HairBundleLab_Documentation.pdf) for HairBundleLab, explaining the different components of the app. For example, how to define the mechanical, electrical, and geometric properties and what properties of the bundle can be changed in the app. Please review Chapter 4 of the [documentation](resources/HairBundleLab_Documentation.pdf) to understand what each parameter means and where to modify these parameters in the app. 
 
 ### Running HairBundleLab
 In Chapter 5 of the [documentation](resources/HairBundleLab_Documentation.pdf), we describe how to run the app once all the parameters are defined, along with an example using the default parameters for you to visualize the response of your HB. At the end of this chapter, you can find some tips and tricks, which we have detailed in Section 5.3 under miscellaneous information.
@@ -73,7 +73,7 @@ In Chapter 5 of the [documentation](resources/HairBundleLab_Documentation.pdf), 
 If you prefer not to use our application but are comfortable working directly with raw code for greater customization or integration into your projects, you can utilize the contents of the [rawCode](toolbox/rawCode/) folder. In this folder, the main file you need to open in MATLAB is <code>ThreeStBundle_Index.m</code>, which allows you to run the model with preset parameters. Below is a detailed description of each file in the folder:
 * <code>ThreeStBundle_Index.m</code>: This is the primary script file where you can specify input properties and numerical simulation parameters, such as time steps. Additionally, you can customize the initial time for which the static force is applied to the system, a feature not yet available in the application (for more details, refer to Section 4.3 of the [documentation](resources/HairBundleLab_Documentation.pdf)). This file also offers customization options for your plots.
 * <code>geometryNL.m</code> This function is crucial for defining the HB geometry, including radii, lengths, and related quantities, which are saved in the <code>geom</code> structure. The file computes all geometric relationships between different stereocilia as both symbolic and mathematical functions, stored in the <code>func</code> structure. 
-* <code>HB_params.m</code>: This important function file allows you to define all mechanical and electrical parameters, saved in the <code>param</code> structure. It is likely you will modify this file frequently when designing your HB.
+* <code>HB_params.m</code>: This important function file allows you to define all mechanical and electrical parameters saved in the <code>param</code> structure. It is likely you will modify this file frequently when designing your HB.
 * <code>forceTime.m</code>: This function defines the force matrix, which has dimensions of $m\times n$, where $m$ represents the number of force amplitudes you simulate, and $n$ represents the force values over time.
 * <code>probability.m</code>: Unless you wish to modify the Boltzmann functions for modeling channel open probability, you do not need to change this file. It utilizes parameters from <code>geom</code>, <code>func</code> and <code>param</code>.
 * <code>rkSolver.m</code>: This function contains a custom Runge-Kutta fourth-order numerical solver. It uses parameters defined in the previously mentioned files and applies the three equations of motion derived in the research to predict the HB response. This is also the file you need to modify if you do not have a Parallel Computing Toolbox license from MATLAB or if you choose not to use it. In <code>line 41</code>, simply change <code>parfor</code> to <code>for</code>.
@@ -81,6 +81,11 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
 ## Release Notes
+### v1.3
+Release date: 03-14-2025
+
+* HairBundleLab now provides direct computation and reporting of the geometric gain of the gating spring between stereociliary rows 1 and 2, as well as rows 2 and 3. Additionally, it displays the lengths of the tip link assembly when the hair bundle is in its upright configuration. These values can be accessed by clicking the <img src="resources/images/moreInfo2.png" alt="DownloadZIP" width="22" title=""> button, located to the left of the <code>Update Geometry</code> button.
+
 ### v1.2
 Release date: 01-23-2025
 
