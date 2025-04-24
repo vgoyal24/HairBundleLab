@@ -2,6 +2,8 @@ Copyright © 2024. The Regents of the University of Michigan.<br/>
 [Grosh Lab](https://sites.google.com/a/umich.edu/groshlab/home), Mechanical Engineering.<br/>
 This project is licensed under the terms of the BSD 3-clause license. 
 
+The associated publication is under review, and the preprint uploaded to BioRxiv can be found [here](https://doi.org/10.1101/2025.04.17.649156).
+
 # HairBundleLab
 
 HairBundleLab is a specialized software designed to simulate the response of mammalian cochlear hair bundles (HBs), critical mechanosensory structures within the inner ear responsible for transducing sound, a mechanical input, into electrical signals processed by the brain. In inner hair cells, HB deflection marks the final mechanical step before neural activation, while in outer hair cells, it functions as the gain control mechanism in the cochlear amplifier, a process essential for normal hearing.
