@@ -2,7 +2,7 @@ Copyright © 2024. The Regents of the University of Michigan.<br/>
 [Grosh Lab](https://sites.google.com/a/umich.edu/groshlab/home), Mechanical Engineering.<br/>
 This project is licensed under the terms of the BSD 3-clause license. 
 
-The associated publication is under review, and the preprint uploaded to BioRxiv can be found [here](https://doi.org/10.1101/2025.04.17.649156).
+The associated preprint uploaded to BioRxiv can be found [here](https://doi.org/10.1101/2025.04.17.649156).
 
 # HairBundleLab
 
