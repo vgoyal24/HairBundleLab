@@ -83,6 +83,12 @@ If you prefer not to use our application but are comfortable working directly wi
 * <code>bundleVisual.m</code>: This function file is used for visualizing your HB. It is employed in <code>ThreeStBundle_Index.m</code> to plot the HB and typically does not require direct editing unless you are curious about its implementation.
 
 ## Release Notes
+### v2.0
+Release date: 10-08-2025
+
+* This version introduces a significant update to the HB morphology model for greater biological realism. The tips of the shorter stereocilia can now be modeled as tented rather than circular, providing a closer match to experimental micrographs.
+* You can now predict geometric gains, tip link assembly lengths, and tip link inclinations directly from the taller stereocilia in the upright configuration, without running time-domain simulations. This addition enhances the analytical capabilities of HairBundleLab while maintaining full compatibility with existing computational features.
+
 ### v1.3
 Release date: 03-14-2025
 
