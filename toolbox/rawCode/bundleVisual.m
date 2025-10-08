@@ -95,13 +95,9 @@ function [g1, g2, g3, y1, y2, y3, b1, b2, b3, r1, X_r1, Y_r1, X_r2, Y_r2, X_r3, 
 
         pp_x = spline([0 0.5 1], control_points_x);
         pp_y = spline([0 0.5 1], control_points_y);
-        
-        % disp(pp_x)
-        % disp(pp_y)
+
         dx = ppval(pp_x, 0);  % where pp_x is the spline output for the X coordinates
-        % disp(dx);
         dy = ppval(pp_y, 0);  % where pp_x is the spline output for the X coordinates
-        % disp(dy);
     else
         fac = 0;
         % Stereocilia visualization vectors
