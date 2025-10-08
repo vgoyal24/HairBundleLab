@@ -14,6 +14,10 @@ param.phi_o = 0;
 param.la1_o = 0;
 param.la2_o = 0;
 
+% Tip Offset angles
+param.theta12 = 77*pi/180;
+param.theta23 = 84.4*pi/180;
+
 fprintf("Parameters loaded...\n");
 
 %% Geometry Solution, Bundle Visualization and Boltzmann Probability Functions
@@ -21,7 +25,7 @@ fprintf("Parameters loaded...\n");
 % functions that depend on phi, la1, and la2, "l1" is the length of the 
 % tip link between rows 1 and 2, and "l2" is the length of the tip link 
 % between rows 2 and 3. 
-[geom, func, l1, l2] = geometry_NL(param.phi_o, param.la1_o, param.la2_o);
+[geom, func, l1, l2] = geometry_NL(param.phi_o, param.la1_o, param.la2_o, param.theta12, param.theta23);
 
 [g1, g2, g3, y1, y2, y3, b1, b2, b3, r1, X_r1, Y_r1, X_r2, Y_r2, X_r3, Y_r3] = bundleVisual(geom);
 % The probability functions are computed in "probability.m" function file
@@ -34,16 +38,20 @@ func.fun_Po2 = prob.fun_Po2;
 fprintf("Geometric relations computed...\n");
 
 %% External Force Definition
-probe_flag = 0;
+probe_flag = 1;
 
 % Static force to change the resting open probability
 Fst = 0e-12; 
 
 % Applied force amplitudes.
 if probe_flag == 0
-    Fo = [-180, -115, -41, 51, 127, 217, 291, 375, 470, 569, 677, 797, 950]*1e-12;
+    % Force rise-time.
+    tauF = 0.1e-3;
+    Fo = [-420, -265.9, -56.6, 168.4, 352.3, 600.0, 805.0, 1020.0, 1270.0, 1525.0, 1800.0, 2070.0, 2450.0]*1e-12;
 else
-    Fo = param.K_P*[-39, -25, -9, 11, 27, 47, 63, 81, 102, 123, 147, 173, 206]*1e-9;
+    % Displacement rise-time.
+    tauF = 0.01e-3;
+    Fo = param.K_P*[-38, -24, -5, 15, 32, 54, 72, 92, 114, 137, 162, 186, 220]*1e-9;
 end
 
 % Idle time without force for HB to achieve the resting state.
@@ -58,9 +66,6 @@ tAppliedForce = 50.4e-3 + tNoForceEnd;
 % Duration after the force application "tAppliedForce", for HB to return 
 % to the resting state (no-force condition).
 tAfterForceOff = 54.4e-3 + tAppliedForce;
-
-% Force rise-time.
-tauF = 0.1e-3;
 
 % Time-step for nonlinear solution.
 h = 1e-6;
@@ -236,12 +241,12 @@ set(xlab, 'fontsize', 28);
 set(ylab, 'fontsize', 28);
 
 figure(6)
+fill(X_r1*1e6, Y_r1*1e6, [g1 g2 g3], 'EdgeColor', 'none')
 hold on
-fill(X_r1*1e6, Y_r1*1e6, [g1 g2 g3])
-fill(X_r2*1e6, Y_r2*1e6, [y1 y2 y3])
-fill(X_r3*1e6, Y_r3*1e6, [b1 b2 b3])
-plot([-geom.b_12+geom.r_BD*cos(geom.a2_o)+geom.r_2*cos(geom.a2_o) -geom.r_1]*1e6, [geom.r_BD*sin(geom.a2_o)+geom.r_2*sin(geom.a2_o) geom.l1_gs]*1e6, 'color', [r1 0 0], LineWidth=2)
-plot([-geom.b_12-geom.b_23+geom.r_EF*cos(geom.a5_o)+geom.r_3*cos(geom.a5_o) -geom.b_12+geom.l2_gs*cos(geom.a2_o)-geom.r_2*cos(pi/2-geom.a2_o)]*1e6, [geom.r_EF*sin(geom.a5_o)+geom.r_3*sin(geom.a5_o) geom.l2_gs*sin(geom.a2_o)+geom.r_2*sin(pi/2-geom.a2_o)]*1e6, 'color', [r1 0 0], LineWidth=2)
+fill(X_r2*1e6, Y_r2*1e6, [y1 y2 y3], 'EdgeColor', 'none')
+fill(X_r3*1e6, Y_r3*1e6, [b1 b2 b3], 'EdgeColor', 'none')
+plot([-geom.b_12+geom.r_BD*cos(geom.a2_o)+geom.r_2*cos(geom.theta12-pi/2+geom.a2_o) -geom.r_1]*1e6, [geom.r_BD*sin(geom.a2_o)+geom.r_2*sin(geom.theta12-pi/2+geom.a2_o) geom.l1_gs-param.la1_o]*1e6, 'color', [r1 0 0], 'LineJoin', 'round', LineWidth=2)
+plot([-geom.b_12-geom.b_23+geom.r_EF*cos(geom.a5_o)+geom.r_3*cos(geom.theta23-pi/2+geom.a5_o) -geom.b_12+(geom.l2_gs-param.la2_o)*cos(geom.a2_o)-geom.r_2*cos(pi/2-geom.a2_o)]*1e6, [geom.r_EF*sin(geom.a5_o)+geom.r_3*sin(geom.theta23-pi/2+geom.a5_o) (geom.l2_gs-param.la2_o)*sin(geom.a2_o)+geom.r_2*cos(geom.a2_o)]*1e6, 'color', [r1 0 0], 'LineJoin', 'round', LineWidth=2)
 hold off
 ylim([-0.5 4.5])
 xlim([-1.5 0.5])
@@ -250,5 +255,6 @@ ylab = ylabel('\mum');
 set(gca, 'fontname', 'helvetica', 'fontsize', 26) 
 set(xlab, 'fontsize', 28);
 set(ylab, 'fontsize', 28);
+box on
 
 tOfCompletion = toc;
