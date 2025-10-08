@@ -1,4 +1,5 @@
 % HairBundleLab
+% Version 2.0 08-Oct-2025 (Latest)
 % Version 1.0 07-Jan-2025
  
 % Author:
